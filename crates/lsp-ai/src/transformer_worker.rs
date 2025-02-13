@@ -645,7 +645,7 @@ async fn do_code_action_action_resolve(
 
     let edit = TextEdit::new(
         Range::new(
-            Position::new(data.range.start.line, data.range.start.character),
+            Position::new(data.range.end.line, data.range.end.character + 1),
             Position::new(data.range.end.line, data.range.end.character),
         ),
         response.insert_text.clone(),
