@@ -1,6 +1,6 @@
 [package]
 name = "lsp-ai"
-version = "0.7.1"
+version = "0.7.2"
 
 description.workspace = true
 repository.workspace = true
@@ -15,7 +15,7 @@ lsp-types = "0.95.0"
 ropey = "1.6.1"
 serde = "1.0.190"
 serde_json = "1.0.108"
-hf-hub = { git = "https://github.com/huggingface/hf-hub", version = "0.3.2" }
+hf-hub = { git = "https://github.com/huggingface/hf-hub", version = "0.4.3" }
 rand = "0.8.5"
 tokenizers = "0.14.1"
 parking_lot = "0.12.1"
