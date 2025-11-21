@@ -131,7 +131,7 @@ impl OpenAI {
         let token = self.get_token()?;
         let params = json!({
             "model": self.configuration.model,
-            "max_completion_tokens": params.max_tokens,
+            "max_output_tokens": params.max_tokens,
             "n": 1,
             // "top_p": params.top_p,
             "presence_penalty": params.presence_penalty,
@@ -189,7 +189,7 @@ impl OpenAI {
         let token = self.get_token()?;
         let params = json!({
             "model": self.configuration.model,
-            "max_completion_tokens": params.max_tokens,
+            "max_output_tokens": params.max_tokens,
             "n": 1,
             // "top_p": params.top_p,
             "presence_penalty": params.presence_penalty,
@@ -339,7 +339,7 @@ mod test {
                     "content": "Test {CONTEXT} - {CODE}"
                 }
             ],
-            "max_completion_tokens": 64
+            "max_output_tokens": 64
         });
         let response = open_ai.do_generate(&prompt, run_params).await?;
         assert!(!response.generated_text.is_empty());
